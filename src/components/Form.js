@@ -14,8 +14,14 @@ const Form = () => (
         required
         placeholder="Category"
       />
+      <input
+        className="form-book-author"
+        type="text"
+        required
+        placeholder="Author"
+      />
       <button className="add-btn" type="submit">
-        ADD BOOK
+        Click to Add
       </button>
     </form>
   </div>
