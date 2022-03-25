@@ -9,7 +9,7 @@ const Book = (props) => {
         <span className="span-genre">{genre}</span>
         <h3 className="h3-title">{title}</h3>
         <p className="p-author">{author}</p>
-        <div className="book-header-buttons">
+        <div className="book-div-buttons">
           <button className="Comments" type="button">
             Add
           </button>
