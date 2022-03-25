@@ -9,12 +9,13 @@ Behind the scenes, it will be running React and Redux.
 
 ## Live Demo
 
-[Coming Soon on this address](https://bookstore-react-redux-microverse.app)
+[Coming Soon on this address!](https://bookstore-react-redux-microverse.app) Check back often to see our project growing, or
+visit the [project's GitHub](https://github.com/iKuartz/bookstore) to look at its evolution commit by commit :)
 
 ## Built With
 
 - Languages: HTML, CSS and JS
-- Tools: React, Webpack, NPM, Jest
+- Tools: React, Redux, Webpack, NPM, Jest
 
 ## Getting Started
 
