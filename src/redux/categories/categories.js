@@ -1,6 +1,6 @@
 const VERIFY = 'bookstore/categories/status';
 
-const reducer = (state = [], action) => {
+const categoriesReducer = (state = [], action) => {
   switch (action.type) {
     case VERIFY:
       return 'Under construction';
@@ -11,4 +11,4 @@ const reducer = (state = [], action) => {
 
 export const verifyStatus = () => ({ type: VERIFY });
 
-export default reducer;
+export default categoriesReducer;
