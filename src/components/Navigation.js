@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const Navigation = () => {
+const NavBar = () => {
   const Links = [
     {
       id: 1,
@@ -15,7 +15,7 @@ const Navigation = () => {
   ];
   return (
     <nav className="panel-pg">
-      <h1>Bookstore Inventory</h1>
+      <h1>Bookstore CMS</h1>
       <ul className="ul-links">
         {Links.map((link) => (
           <li key={link.id} className="li-links">
@@ -34,4 +34,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default NavBar;
