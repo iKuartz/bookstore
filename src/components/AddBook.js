@@ -8,12 +8,14 @@ const AddBook = () => {
   const dispatch = useDispatch();
   const [category, setCategory] = useState('');
   const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
 
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
       id: uuidv4(),
       title,
+      author,
       category,
     };
     dispatch(addBook(newBook));
@@ -28,7 +30,11 @@ const AddBook = () => {
           placeholder="Book title"
           onChange={(e) => setTitle(e.target.value)}
         />
-
+        <input
+          className="inputAuthor"
+          placeholder="Book Author"
+          onChange={(e) => setAuthor(e.target.value)}
+        />
         <select
           id="category"
           value={category}

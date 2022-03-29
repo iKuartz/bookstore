@@ -13,8 +13,9 @@ const Books = () => {
         <ul className="ul-books">
           {books.map((book) => (
             <div key={uuidv4} className="list-container-div">
-              <span className="category-span">{book.category}</span>
               <li className="title-li">{book.title}</li>
+              <li className="author-li">{book.author}</li>
+              <span className="category-span">{book.category}</span>
               <div>
                 <button
                   type="button"
