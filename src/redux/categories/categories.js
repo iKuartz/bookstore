@@ -9,6 +9,4 @@ const categoriesReducer = (state = [], action) => {
   }
 };
 
-export const verifyStatus = () => ({ type: VERIFY });
-
 export default categoriesReducer;
