@@ -1,6 +1,5 @@
-import { v4 as uuidv4 } from 'uuid';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBookFromAPI } from '../redux/books/books';
 import AddBook from './AddBook';
 
 const Books = () => {
@@ -12,7 +11,7 @@ const Books = () => {
       <div className="booksList">
         <ul className="ul-books">
           {books.map((book) => (
-            <div key={uuidv4} className="list-container-div">
+            <div key={book.item_id} className="list-container-div">
               <li className="title-li">{book.title}</li>
               <li className="author-li">{book.author}</li>
               <span className="category-span">{book.category}</span>
@@ -20,7 +19,7 @@ const Books = () => {
                 <button
                   type="button"
                   className="remove-btn"
-                  onClick={() => dispatch(removeBook(book.id))}
+                  onClick={() => dispatch(removeBookFromAPI(book.item_id))}
                 >
                   Remove
                 </button>
