@@ -1,5 +1,5 @@
-const ADD_BOOK = 'bookstore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+const ADD_BOOK = 'ADD_BOOK';
+const REMOVE_BOOK = 'REMOVE_BOOK';
 const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
 const appID = 'J5kb08sEBX2JsboPwHf5';
 
@@ -54,15 +54,18 @@ export const removeBookFromAPI = (itemId) => async (dispatch) => {
   });
 };
 
-const booksReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
+      if (Array.isArray(action.payload)) {
+        return [...action.payload];
+      }
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload);
+      return state.filter((book) => book.item_id !== action.payload);
     default:
       return state;
   }
 };
 
-export default booksReducer;
+export default reducer;
