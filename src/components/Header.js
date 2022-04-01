@@ -1,15 +1,20 @@
 import { Link } from 'react-router-dom';
+import './Header.scss';
 
 const Header = () => (
   <header>
-    <h1 className="Bookstore-h1">Bookstore</h1>
-    <nav className="nav">
-      <ul className="d-flex">
+    <h1 className="Bookstore-CMS">Bookstore CMS</h1>
+    <nav>
+      <ul>
         <li>
-          <Link className="BOOKS" to="/">Books</Link>
+          <Link to="/">
+            Books
+          </Link>
         </li>
         <li>
-          <Link className="CATEGORIES" to="categories">Categories</Link>
+          <Link to="categories">
+            Categories
+          </Link>
         </li>
       </ul>
     </nav>

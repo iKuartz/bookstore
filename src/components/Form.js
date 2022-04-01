@@ -40,12 +40,12 @@ const Form = () => {
     e.preventDefault();
     if (title.trim().length === 0) {
       setTitle('');
-      displayErrorMessage('Please input title');
+      displayErrorMessage('Please input a title');
       return;
     }
     if (author.trim().length === 0) {
       setAuthor('');
-      displayErrorMessage('Please input author');
+      displayErrorMessage('Please input an author');
       return;
     }
     if (category === '') {
@@ -66,10 +66,10 @@ const Form = () => {
 
   return (
     <div className="form-container">
-      <h2 className="form-title">Add a Book</h2>
-      <form onSubmit={submitBookToStore}>
+      <h2 className="form-title">Please add a book</h2>
+      <form className="flex flex-wrap" onSubmit={submitBookToStore}>
         <input
-          className="form-book-title"
+          className="form-title"
           type="text"
           required
           placeholder="Title"
@@ -77,28 +77,34 @@ const Form = () => {
           onChange={onTitleChange}
         />
         <input
-          className="form-book-author"
+          className="form-author"
           type="text"
           required
           placeholder="Author"
           value={author}
           onChange={onAuthorChange}
         />
-        <select className="select" default name="category" value={category} onChange={onCategoryChange}>
-          <option value="">
-            Category
-          </option>
-          {categories.sort().map((item) => (
-            <option value={item} key={item}>
-              {item}
-            </option>
-          ))}
-        </select>
-        <button className="add-btn" type="submit">
-          Add a Book
+        <div className="form-book-category">
+          <select
+            className="select"
+            default
+            name="category"
+            value={category}
+            onChange={onCategoryChange}
+          >
+            <option value="">Category</option>
+            {categories.sort().map((item) => (
+              <option value={item} key={item}>
+                {item}
+              </option>
+            ))}
+          </select>
+        </div>
+        <button className="add-btn flex" type="submit">
+          ADD BOOK
         </button>
       </form>
-      <p>{errorMsg}</p>
+      <p className="error">{errorMsg}</p>
     </div>
   );
 };
