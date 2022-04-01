@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { statusCategories } from '../redux/categories/categories';
+import "./Categories.scss";
 
 const Categories = () => {
   const dispatch = useDispatch();
