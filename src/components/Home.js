@@ -1,6 +1,6 @@
 import BookList from './BookList';
 import Form from './Form';
-import "./Home.scss";
+import './Home.scss';
 
 const BooksContainer = () => (
   <section className="booklist">
